@@ -41,8 +41,8 @@ def current_jasmine():
     obs.update()
 
     magdict = convmag.get_magdict()
-    H = convmag.get_mag("J", obs.flux, magdict)
-    J = convmag.get_mag("H", obs.flux, magdict)
+    H = convmag.get_mag("H", obs.flux, magdict)
+    J = convmag.get_mag("J", obs.flux, magdict)
     Hw = 0.9 * J + 0.1 * H - 0.06 * (J - H)**2
     print("H mag=", convmag.get_mag("H", obs.flux, magdict))
     print("J mag=", convmag.get_mag("J", obs.flux, magdict))
