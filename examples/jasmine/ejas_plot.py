@@ -25,8 +25,8 @@ for distpc in darr:
     target.d=distpc*u.pc #change targets
     obs.target = target
     obs.update()
-    Htmp = convmag.get_mag("J", obs.flux, magdict)
-    Jtmp = convmag.get_mag("H", obs.flux, magdict)
+    Htmp = convmag.get_mag("H", obs.flux, magdict)
+    Jtmp = convmag.get_mag("J", obs.flux, magdict)
     Hwtmp = 0.9 * Jtmp + 0.1 * Htmp - 0.06 * (Jtmp - Htmp)**2
     H.append(Htmp)
     J.append(Jtmp)
